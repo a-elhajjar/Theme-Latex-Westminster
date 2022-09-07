@@ -1,0 +1,258 @@
+\documentclass[14pt,xcolor=svgnames]{beamer} %Beamer
+% You can change the point size for the fonts. 
+\usepackage{palatino} %font type
+\usepackage{xcolor,colortbl}
+
+
+\usefonttheme{metropolis} %Type of slides
+\usefonttheme[onlymath]{serif} %font type Mathematical expressions
+\usetheme[progressbar=frametitle,titleformat frame=smallcaps,numbering=counter]{metropolis} %This adds a bar at the beginning of each section.
+\useoutertheme[subsection=false]{miniframes} %Circles in the top of each frame, showing the slide of each section you are at
+\setbeamertemplate{blocks}[rounded]
+\setbeamercolor{block title}{use=structure,fg=black,bg=bg2!90}
+\setbeamercolor{block body}{parent=normal text,use=block title,bg=bgu!90}
+\setbeamercolor{block title alerted}{use=structure,fg= blck, bg= bgu!90}
+\setbeamercolor{block body alerted}{parent=normal text,use=block title,fg= black, bg=bg2!90}
+
+%You can do the same for all other blocks
+\usepackage{tcolorbox}
+\usepackage{enumitem}
+
+\usepackage{appendixnumberbeamer} %enumerate each slide without counting the appendix
+\definecolor{blck}{RGB}{124,0,63}
+\definecolor{bgu}{RGB}{33,138,134}
+\definecolor{bg2}{RGB}{255,223,0}
+\definecolor{sep}{RGB}{138,169,187}
+\setbeamercolor{progress bar}{bg=bgu,fg=blck} %These are the colours of the progress bar. Notice that the names used are the svgnames
+\setbeamercolor{title separator}{fg=blck} %This is the line colour in the title slide
+\setbeamercolor{structure}{bg=bg2, fg=white} %Colour of the text of structure, numbers, items, blah. Not the big text.
+\setbeamercolor{normal text}{bg=bgu, fg=white} %Colour of normal text
+\setbeamercolor{alerted text}{fg=sep} %Color of the alert box
+\setbeamercolor{example text}{fg=Maroon!70!Coral} %Colour of the Example block text
+\setbeamercolor{palette primary}{fg=black, bg=bg2} %These are the colours of the background. Being this the main combination and so one. 
+\setbeamercolor{palette secondary}{bg=bg2, fg=black}
+\setbeamercolor{palette tertiary}{bg=bg2, fg=black}
+\setbeamercolor{section in toc}{bg=bg2, fg=white} %Color of the text in the table of contents (toc)
+
+\usepackage{pifont}
+
+
+%These next packages are the useful for Physics in general, you can add the extras here. 
+\usepackage{amsmath,amssymb}
+\usepackage{slashed}
+\usepackage{cite}
+\usepackage{relsize}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{multicol}
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+\usepackage{pgfplots}
+\usepgfplotslibrary{dateplot}
+\usepackage{geometry}
+\usepackage{xspace}
+\newcommand{\themename}{\textbf{\textsc{bluetemp}\xspace}}%metropolis}}\xspace}
+\usepackage{float}
+%Figure positioning. I use tikz but you can use other.
+\usepackage{tikz}
+\usepackage{graphicx}
+\usetikzlibrary{calc}
+\title{Title of presentation}
+\author[Short name]{Presenter name} %With inst, you can change the institution they belong
+\subtitle{Subtitle}
+\institute[uni]{ School of XXXXXXX  \\ University of Westminster}
+\date{\today} %Here you can change the date. if you want to change to a future date use the date instead of \today for example - \date{October 01, 2022}
+\titlegraphic{\vspace{-0.5cm}\hfill\includegraphics[scale=0.05]{logo.png}} %You can modify the location of the logo by changing the command \vspace{}. 
+
+\begin{document}
+{
+\setbeamercolor{background canvas}{bg=bgu, fg=black}
+\setbeamercolor{normal text}{fg=white}
+\maketitle
+}%This is the colour of the first slide. bg= background and fg=foreground
+
+\metroset{titleformat frame=smallcaps} %This changes the titles for small caps
+
+\begin{frame}{Outline}
+\setbeamertemplate{section in toc}[sections numbered] %This is numbering the sections
+\tableofcontents[hideallsubsections] %You can comment this line if you want to show the subsections in the table of contents
+\end{frame}
+
+\begin{frame}{Objectives}
+\underline{\textsc{Some text:}}
+\newline
+\textbf{\textsc{Some text:}}
+\begin{small}
+This is some small Text. 
+\end{small} 
+\newline
+\begin{Large}
+	This is some Large Text. 
+\end{Large}
+\newline
+\begin{Huge}
+	This is some Huge Text. 
+\end{Huge}
+
+\end{frame}
+
+
+\section{Introduction}
+
+\begin{frame}[fragile]{Introduction: blah blah} %You can change fragile by standout
+
+\begin{itemize} %The symbol of the items can be changed by which ever you want, this is just an example. using pifont package for sympols. full list of codes is here https://latex-tutorial.com/bullet-styles/
+ \item[\ding{51}]Text
+	\item[\ding{56}] Text
+	\item[\ding{43}] Text
+	\item[\ding{118}] Text
+	\item[\ding{48}] Text
+
+\end{itemize}
+TextTextText
+TextTextText
+\begin{enumerate}[label=(\Alph*)]
+	\item Text
+\begin{enumerate}[label=\Roman*.]
+	\item Text
+	\item Text
+\end{enumerate}	
+\begin{enumerate}[label=\arabic*.]
+	\item Text
+	\item Text
+\end{enumerate}	
+\end{enumerate}
+
+\end{frame}
+
+\begin{frame}[standout]{This is other type of slide}
+
+An equation without number could be represented by:
+\begin{equation*}
+	c^{2} = a^{2} + b^{2}
+\end{equation*}
+And an equation with number:
+\begin{equation}
+E^{2} = m^{2} + p^{2}
+\end{equation}
+\end{frame}
+
+
+\section{This is another section}
+\begin{frame}{Frame Title} %You can also not write fragile or standout and you can see how it looks
+Hello world!
+\end{frame}
+\section{Blocks}
+	\begin{frame}{Blocks colours}
+		
+		\begin{block}{Block 1}
+			\begin{itemize}
+			\item one
+			\item two
+			\item three
+			\end{itemize}
+		\end{block}
+		
+
+		\begin{alertblock}{Block alert}
+			\begin{itemize}
+				\item example
+			\end{itemize}
+		\end{alertblock}
+	\end{frame}
+
+
+\begin{frame}{Blocks colours (Cont.)}
+	
+
+	
+	\begin{definition}{Block definition}
+		\begin{itemize}
+			\item example
+		\end{itemize}
+	\end{definition}
+	
+	\begin{theorem}{Block theorem}
+		\begin{itemize}
+			\item example
+		\end{itemize}
+	\end{theorem}
+\end{frame}
+
+\section{Tables and figures}
+	
+	\begin{frame}{Figures}
+		
+		% Commands to include a figure. This is centered. 
+		\begin{figure}
+		\includegraphics[width=0.2\textwidth]{placeholder}
+		\caption{\label{fig:default_positioning}default position.}
+		\end{figure}
+		% Commands to include a figure at a specific location
+		\begin{figure}  
+		\begin{tikzpicture}[remember picture,overlay]
+			\node[anchor=south west,inner sep=0pt] at ($(current page.south west)+(2cm,2cm)$) {
+
+		\includegraphics[width=0.2\textwidth]{placeholder}
+
+
+	};
+\end{tikzpicture}
+
+
+		\end{figure}
+	\end{frame}
+	
+\begin{frame}{Table}
+	
+	\begin{table}
+		\centering
+		\begin{tabular}{l|r}
+			One & Two \\\hline
+			One & 42 \\
+			Two & 13
+		\end{tabular}
+		\caption{\label{tab:1}An example table.}
+	\end{table}
+
+\begin{table}
+	\centering
+	\begin{tabular}{>{\columncolor{bg2}|}l r|}
+	One & Two \\\hline
+			One & 42 \\
+	\end{tabular}
+	\caption{\label{tab:2}An example table.}
+\end{table}
+\begin{table}
+	\centering
+	\begin{tabular}{>{\columncolor{bg2}|}l >{\columncolor{blck}|}r|}
+		\rowcolor{bgu}	One & Two \\\hline
+		One & 42 \\
+	\end{tabular}
+	\caption{\label{tab:3}An example table.}
+\end{table}
+	\end{frame}
+\section{Final section}
+
+
+\begin{frame}{Conclusion}
+These are the final words, you do your best to try to wake up everyone that was listening to your talk.
+\end{frame}
+
+\section{Final Notes}
+
+
+\begin{frame}{Footnotes}
+ final word \footnote{\href{overleaf}{https://www.overleaf.com/latex/templates/beamer/ybffdrynfwjp.pdf}}
+\end{frame}
+\begin{frame}[standout]
+Text
+\end{frame}
+
+\appendix
+
+\begin{frame}{Back up}
+Text
+\end{frame}
+
+\end{document}

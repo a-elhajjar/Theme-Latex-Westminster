@@ -1,0 +1,24 @@
+\frametitle{Introduction: blah blah}
+
+\begin{itemize} %The symbol of the items can be changed by which ever you want, this is just an example. using pifont package for sympols. full list of codes is here https://latex-tutorial.com/bullet-styles/
+ \item[\ding{51}]Text
+	\item[\ding{56}] Text
+	\item[\ding{43}] Text
+	\item[\ding{118}] Text
+	\item[\ding{48}] Text
+
+\end{itemize}
+TextTextText
+TextTextText
+\begin{enumerate}[label=(\Alph*)]
+	\item Text
+\begin{enumerate}[label=\Roman*.]
+	\item Text
+	\item Text
+\end{enumerate}	
+\begin{enumerate}[label=\arabic*.]
+	\item Text
+	\item Text
+\end{enumerate}	
+\end{enumerate}
+

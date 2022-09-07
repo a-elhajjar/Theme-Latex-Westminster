@@ -1,0 +1,6 @@
+\beamer@sectionintoc {1}{Introduction}{4}{0}{1}
+\beamer@sectionintoc {2}{This is another section}{7}{0}{2}
+\beamer@sectionintoc {3}{Blocks}{9}{0}{3}
+\beamer@sectionintoc {4}{Tables and figures}{12}{0}{4}
+\beamer@sectionintoc {5}{Final section}{15}{0}{5}
+\beamer@sectionintoc {6}{Final Notes}{17}{0}{6}
